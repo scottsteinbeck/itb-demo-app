@@ -1,0 +1,18 @@
+<ion-view view-title="User Detail">
+  <ion-content>
+      <ion-item class=" item-avatar">
+      	<img src="{{user.gravatar}}">
+        <h2>{{user.firstname}} {{user.lastname}}</h2>
+        <p>{{user.email}}</p>
+        <p>{{user.company}}</p>
+      </ion-item>
+      <ion-item>
+        {{user.role.name}}
+        <span class="item-note">Role</span>
+      </ion-item>
+      <ion-item>
+        {{user.lastlogin}}
+        <span class="item-note">Last Login</span>
+      </ion-item>
+  </ion-content>
+</ion-view>

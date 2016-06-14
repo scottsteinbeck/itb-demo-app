@@ -1,0 +1,24 @@
+<ion-view view-title="Product Detail">
+  <ion-content>
+	<ion-item>
+		<h2>{{product.name}}</h2>
+		<p>{{product.modelnumber}}</p>
+		<p>{{product.sku}}</p>
+	</ion-item>
+	<ion-item>
+		{{product.category.name}}
+		<span class="item-note">category</span>
+	</ion-item>
+	<ion-item class="item-divider">
+		Inventory
+	</ion-item>
+	<ion-list>
+		<ion-item class="item-icon-left" ng-repeat="item in inventory">
+		<i class="icon ion-pricetag"></i>
+		<h2>{{item.serialnumber}}</h2>
+		<p>{{item.customer.firstname}} {{item.customer.lastname}}</p>
+		<small>{{item.installtype}}</small>
+		</ion-item>
+	</ion-list>
+  </ion-content>
+</ion-view>
